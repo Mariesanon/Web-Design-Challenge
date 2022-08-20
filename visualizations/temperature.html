@@ -8,16 +8,15 @@
     <title>Web Visualization Dashboard</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 
 <body>
-
         <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary primary-color">
 
             <!-- Navbar brand -->
-            <a class="navbar-brand" href="index.html"><b>
+            <a class="navbar-brand" href="../index.html"><b>
                     <h2>Latitude</h2>
                 </b> </a>
     
@@ -37,19 +36,18 @@
                         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false" style="color: #fff;">Plots</a>
                         <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                            <a target="__blank" href="visualizations/temperature.html" class="dropdown-item">Max
-                                Temperature</a>
-                            <a target="__blank" href="visualizations/humidity.html" class="dropdown-item">Humidity</a>
-                            <a target="__blank" href="visualizations/cloudiness.html" class="dropdown-item">Cloudiness</a>
-                            <a target="__blank" href="visualizations/windspeed.html" class="dropdown-item">Wind Speed</a>
+                            <a target="__blank" href="../visualizations/temperature.html" class="dropdown-item">Max Temperature</a>
+                            <a target="__blank" href="../visualizations/humidity.html" class="dropdown-item">Humidity</a>
+                            <a target="__blank" href="../visualizations/cloudiness.html" class="dropdown-item">Cloudiness</a>
+                            <a target="__blank" href="../visualizations/windspeed.html" class="dropdown-item">Wind Speed</a>
                         </div>
                     </li>
     
                     <li class="nav-item">
-                        <a class="nav-link" style="color: #fff;" href="compare.html">Comparison</a>
+                        <a class="nav-link" style="color: #fff;" href="../compare.html">Comparison</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="color: #fff;" href="data.html">Data</a>
+                        <a class="nav-link" style="color: #fff;" href="../data.html">Data</a>
                     </li>
     
     
@@ -64,73 +62,80 @@
 
     <!-- body -->
 
-    <div class="container mt-4">
-        <div class="row">
-            <div class= "col-md-8 bg-light">
+    <div class="container  mt-4">
+        <div class="row row-grid">
+            <div class="col-md-8 bg-light">
                 
                     <section>
-                        <h1 class="text-primary"> <span style="font-size: smaller;">Summary</span> : Latitude vs. X </h1>
+                        <h1 class="text-primary">Max Temperature</h1>
                         <hr>
                         <figure>
-                            <img src="assets/images/latitutevstemp.jpeg" width="200" height="200"
-                            alt="Latitude vs. Temperature" title="Landing page" style="float: left"/>
+                            <img id="main" src="../assets/images/latitutevstemp.jpeg" width="80%" height="300px" alt="Latitude vs. Temperature">
                         </figure>
-                        <section style="font-size: larger;">
-                            <p> The purpose of this project was to analyze how weather changes as you get closer to equator.
-                                To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset
-                                on over 500 citites.
-                            </p>
-                
-                            <p> After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. Latitude
-                                Factors we looked at included: temperature, cloudiness, wind_speed and humidity. This site provides
-                                the source data and visualizations created as part of the analysis, as well as explanations and 
-                                descriptions of any trends and correlation witnessed.
+                        <section id="Summary">
+                            <p> As expected, the weather becomes significantly warmer as one
+                                approaches the
+                                equator(0 Deg. Latitude). More interestlingly, however, is the fact that the southern
+                                hemisphere tends to be warmer this time of the year than the northern hemisphere. This
+                                may be due to the tilt of the earth at the time of the year this data was gathered.
+
                             </p>
                         </section>
-                        
+
                     </section>
-               
+
+
             </div>
-            <div class="col-md-4 mt-3">
-                <div>
-                    <h5 class="text-primary"> Visualizations</h5>
+
+
+            <div class="col-md-4 mt-4">
+                <div class="box box-right">
+                    <h5 class="text-primary" style="font-weight:bold">Visualizations</h5>
                     <hr>
-                    <div class ="row">
+                    <div class="row">
+
                         <div class="col-xs-6 col-sm-3 col-md-6">
                             <figure>
-                                <a target="__blank" href= "visualizations/temperature.html">
-                                    <img id="landing" src="assets/images/latitutevstemp.jpeg" alt="City Latitude vs. Temperature">
+                                <a target="__blank" href="temperature.html">
+                                    <img id="landing" style="border:1px solid #4285F4;" src="../assets/images/latitutevstemp.jpeg"
+                                        alt="City Latitude vs. Temperature">
                                 </a>
                             </figure>
                         </div>
                         <div class="col-xs-6 col-sm-3 col-md-6">
                             <figure>
-                                <a target="__blank" href="visualizations/humidity.html">
-                                    <img id="landing" src="assets/images/latitudevshumidity.jpeg" alt="City Latitude vs. Humidity">
+                                <a target="__blank" href="humidity.html">
+                                    <img id="landing" src="../assets/images/latitudevshumidity.jpeg"
+                                        alt="City Latitude vs. Humidity">
                                 </a>
                             </figure>
                         </div>
                         <div class="col-xs-6 col-sm-3 col-md-6">
                             <figure>
-                                <a target="__blank" href="visualizations/cloudiness.html">
-                                    <img id="landing" src="assets/images/latitutevscloudness.jpeg" alt="City Latitude vs. Cloudiness">
+                                <a target="__blank" href="cloudiness.html">
+                                    <img id="landing" src="../assets/images/latitutevscloudness.jpeg"
+                                        alt="City Latitude vs. Cloudiness">
                                 </a>
                             </figure>
                         </div>
                         <div class="col-xs-6 col-sm-3 col-md-6">
                             <figure>
-                                <a target="__blank" href="visualizations/windspeed.html">
-                                    <img id="landing" src="assets/images/latitudevswindspeed.jpeg" alt="City Latitude vs. Windspeed">
+                                <a target="__blank" href="windspeed.html">
+                                    <img id="landing" src="../assets/images/latitudevswindspeed.jpeg"
+                                        alt="City Latitude vs. Windspeed">
                                 </a>
                             </figure>
                         </div>
+
 
                     </div>
-
                 </div>
             </div>
+
         </div>
+
     </div>
+
 
 
 
@@ -139,7 +144,7 @@
 
 
 
-   
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
